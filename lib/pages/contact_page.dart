@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class ContactPage extends StatefulWidget {
-  const ContactPage({super.key});
-
   @override
   _ContactPageState createState() => _ContactPageState();
 }
@@ -17,7 +15,7 @@ class _ContactPageState extends State<ContactPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Contact Page')),
+      appBar: AppBar(title: Text('Contact Page')),
       body: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -31,7 +29,7 @@ class _ContactPageState extends State<ContactPage> {
                 ),
                 TextFormField(
                   autofocus: true,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     icon: Icon(Icons.person),
                     hintText: 'Enter your name',
                     labelText: 'Name',
@@ -42,7 +40,7 @@ class _ContactPageState extends State<ContactPage> {
                   validator: (value) => value!.isEmpty ? 'Please enter your name' : null,
                 ),
                 TextFormField(
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     icon: Icon(Icons.email),
                     hintText: 'Enter your email',
                     labelText: 'Email',
@@ -53,7 +51,7 @@ class _ContactPageState extends State<ContactPage> {
                   validator: (value) => value!.isEmpty ? 'Please enter your email' : null,
                 ),
                 TextFormField(
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     icon: Icon(Icons.message),
                     hintText: 'Enter your message',
                     labelText: 'Message',
@@ -64,18 +62,19 @@ class _ContactPageState extends State<ContactPage> {
                   onSaved: (value) => message = value,
                   validator: (value) => value!.isEmpty ? 'Please enter a message' : null,
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
+                      // Handle form submission
                       _formKey.currentState!.reset();
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Form submitted successfully!')),
+                        SnackBar(content: Text('Form submitted successfully!')),
                       );
                     }
                   },
-                  child: const Text('Submit'),
+                  child: Text('Submit'),
                 ),
               ],
             ),

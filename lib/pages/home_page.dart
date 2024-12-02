@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          // Top Half
           Expanded(
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/image1.jpg'), 
                   fit: BoxFit.cover,
@@ -22,7 +19,7 @@ class HomePage extends StatelessWidget {
           // Bottom Half
           Expanded(
             child: Container(
-              color: Theme.of(context).colorScheme.surface,
+              color: Theme.of(context).colorScheme.background,
               alignment: Alignment.center,
               child: Transform.rotate(
                 angle: -0.1, 

@@ -6,17 +6,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: const ColorScheme.light(
+        colorScheme: ColorScheme.light(
           primary: Colors.blue,
-          surface: Colors.black87,
+          background: Colors.black87,
         ),
-        textTheme: const TextTheme(
+        textTheme: TextTheme(
           titleLarge: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
