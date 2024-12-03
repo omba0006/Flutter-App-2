@@ -1,3 +1,25 @@
+# name: flutter_application_1
+# description: "A new Flutter project."
+# publish_to: 'none'
+# version: 0.1.0
+
+# environment:
+#   sdk: ^3.5.4
+
+# dependencies:
+#   flutter:
+#     sdk: flutter
+#   google_fonts: ^6.2.1
+
+# dev_dependencies:
+#   flutter_test:
+#     sdk: flutter
+#   flutter_lints: ^4.0.0
+
+# flutter:
+#   uses-material-design: true
+
+
 name: flutter_application_1
 description: "A new Flutter project."
 publish_to: 'none'
@@ -10,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
+  http: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -19,4 +42,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-
+  # Add assets here
+  assets:
+    - assets/image1.jpg
